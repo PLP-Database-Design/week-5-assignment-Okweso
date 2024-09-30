@@ -23,6 +23,7 @@ db.connect((err) => {
     if (err) return console.log('There was an error connecting to the database');
     console.log('Connection to the database was successful', db.threadId);
 
+    //Question one
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.get('/patients_endpoint', (req, res) => {
@@ -39,6 +40,7 @@ db.connect((err) => {
     })
 
 
+    //Question Two
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.get('/providers_endpoint', (req, res) => {
@@ -54,6 +56,8 @@ db.connect((err) => {
         })
     })
 
+
+    //Question Three
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.get('/patients_by_first_name', (req, res) => {
@@ -69,6 +73,8 @@ db.connect((err) => {
         })
     })
 
+
+    //Question Four
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.get('/providers_by_specialty', (req, res) => {
